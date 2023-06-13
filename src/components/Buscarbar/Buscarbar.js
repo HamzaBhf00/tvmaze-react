@@ -1,30 +1,29 @@
-import { useState } from 'react'
-import Alert from '../Alerta/Alert'
+import React, { useState } from 'react';
 
-const Buscarbar = () => {
-    const [buscarTerm, setBuscarTerm] = useState("")
-    const manejadorBusqueda = (e) => {
-        e.pereventDefualt()
+const Buscarbar = ({ onSearch }) => {
+    const [buscarTerm, setBuscarTerm] = useState('');
 
-        console.log("Buscar por Term: " + buscarTerm)
-    }
+    const handleSearch = (event) => {
+        setBuscarTerm(event.target.value);
+        onSearch(event.target.value);
+    };
 
     return (
-        <div>
-            <nav class="navbar navbar-light">
-                <div class="container-fluid justify-content-center mt-4">
-                    <Alert message="Introduce algo" type="danger" />
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Buscar"
-                            value={buscarTerm}
-                            onChange={(e) => setBuscarTerm(e.target.value)}
-                        />
-                        <button class="btn btn-outline-success" type="submit" onClick={manejadorBusqueda}>Buscar</button>
-                    </form>
-                </div>
-            </nav>
-        </div>
-    )
+        <nav class="navbar navbar-light">
+            <div class="container-fluid justify-content-center">
+                <form className="d-flex" onSubmit={handleSearch}>
+                    <input class="form-control me-2"
+                        aria-label="Search"
+                        type="text"
+                        placeholder="Buscar serie..."
+                        value={buscarTerm}
+                        onChange={handleSearch}
+                    />
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+        </nav>
+    );
 }
 
-export default Buscarbar
+export default Buscarbar;
