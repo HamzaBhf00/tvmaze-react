@@ -1,8 +1,11 @@
 import React from 'react'
+import Buscarbar from '../Buscarbar/Buscarbar'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className="home">
+      <Buscarbar />
+    </div>
   )
 }
 
