@@ -12,6 +12,9 @@ const Navbar = () => {
               <Link to="/">
               <button class="btn btn-outline-success me-2" type="button">Home</button>
               </Link>
+              <Link to="shows">
+              <button class="btn btn-outline-success me-2" type="button">Shows</button>
+              </Link>
               <Link to="about">
               <button class="btn btn-outline-success me-2" type="button">About</button>
               </Link>
