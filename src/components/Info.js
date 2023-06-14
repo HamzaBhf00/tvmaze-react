@@ -13,7 +13,13 @@ const Info = () => {
   }, [showId]);
 
   if (!show) {
-    return <div>Cargando...</div>;
+    return (
+      <div class="d-flex justify-content-center align-items-center mt-5">
+        <div className="fas fa-spinner badge rounded-pill bg-warning text-dark">
+          Cargando...
+        </div>
+      </div>
+    )
   }
 
   return (
