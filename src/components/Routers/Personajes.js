@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
+import {getPeople} from "../Service/personajes"
 
 const Personajes = () => {
   const [characters, setCharacters] = useState(null)
 
   useEffect(() => {
-    fetch('https://api.tvmaze.com/people')
-      .then(response => response.json())
-      .then(data => setCharacters(data))
+    //fetch('https://api.tvmaze.com/people')
+    // .then(response => response.json())
+    // .then(data => setCharacters(data))
+    // .catch(error => console.log(error));
+    getPeople().then(data => setCharacters(data))
       .catch(error => console.log(error));
   }, []);
 

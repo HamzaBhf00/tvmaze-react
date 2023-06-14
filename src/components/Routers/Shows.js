@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Buscarbar from "../Buscarbar/Buscarbar";
+import {getShows} from '../Service/shows';
 
 const Shows = () => {
   const [shows, setShows] = useState([]);
   const [filtrarShows, setFiltrarShows] = useState([]);
 
   useEffect(() => {
-    fetch('https://api.tvmaze.com/shows')
-      .then(response => response.json())
-      .then(data => {
-        setShows(data);
-        setFiltrarShows(data);
-      })
+    //fetch('https://api.tvmaze.com/shows')
+    // .then(response => response.json())
+    // .then(data => {
+    //   setShows(data);
+    //  setFiltrarShows(data);
+    getShows().then(data => setShows(data))
       .catch(error => console.log(error));
+    //setFiltrarShows(data);
   }, []);
 
   const busquedaMayus = (searchTerm) => {
