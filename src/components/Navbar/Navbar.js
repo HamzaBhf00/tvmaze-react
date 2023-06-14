@@ -1,34 +1,31 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-      <div class="container-fluid ">
-        <div class="collapse navbar-collapse justify-content-center">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <div className="collapse navbar-collapse justify-content-center">
+          <ul className="navbar-nav">
+            <li className="nav-item">
               <Link to="/">
-              <button class="btn btn-outline-success me-2" type="button">Home</button>
+                <button className="btn btn-outline-success me-2" type="button">Inicio</button>
               </Link>
               <Link to="shows">
-              <button class="btn btn-outline-success me-2" type="button">Shows</button>
+                <button className="btn btn-outline-success me-2" type="button">Series</button>
               </Link>
               <Link to="personajes">
-              <button class="btn btn-outline-success me-2" type="button">Personajes</button>
+                <button className="btn btn-outline-success me-2" type="button">Personajes</button>
               </Link>
               <Link to="about">
-              <button class="btn btn-outline-success me-2" type="button">About</button>
+                <button className="btn btn-outline-success me-2" type="button">Sobre Nosotros</button>
               </Link>
-
             </li>
           </ul>
         </div>
       </div>
     </nav>
+  );
+};
 
-  )
-}
-
-export default Navbar
+export default Navbar;
