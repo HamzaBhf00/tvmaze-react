@@ -15,6 +15,9 @@ const Navbar = () => {
               <Link to="shows">
               <button class="btn btn-outline-success me-2" type="button">Shows</button>
               </Link>
+              <Link to="personajes">
+              <button class="btn btn-outline-success me-2" type="button">Personajes</button>
+              </Link>
               <Link to="about">
               <button class="btn btn-outline-success me-2" type="button">About</button>
               </Link>
