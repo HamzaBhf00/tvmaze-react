@@ -12,7 +12,7 @@ const Personajes = () => {
 
   if (!characters) {
     return (
-      <div class="d-flex justify-content-center align-items-center mt-5">
+      <div className="d-flex justify-content-center align-items-center mt-5">
         <div className="fas fa-spinner badge rounded-pill bg-warning text-dark">
           Cargando...
         </div>
